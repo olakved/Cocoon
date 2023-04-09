@@ -27,26 +27,11 @@ function App() {
           path="/"
           element={
             <LayoutWrapper>
-              <HomePage />
-            </LayoutWrapper>
-          }
-        />
-        <Route
-          path="/blog"
-          element={
-            <LayoutWrapper>
               <BlogPage />
             </LayoutWrapper>
           }
         />
-        <Route
-          path="/product"
-          element={
-            <LayoutWrapper>
-              <HeaderN />
-            </LayoutWrapper>
-          }
-        />
+
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="*" element={<ErrorPage />} />

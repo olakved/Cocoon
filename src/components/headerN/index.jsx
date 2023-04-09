@@ -1,18 +1,20 @@
 import React, { useState } from "react";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import menuIcon from "../../assets/menuIcon.png";
 
 function HeaderN() {
   const links = [
     { name: "HOME", link: "/" },
-    { name: "PRODUCT", link: "/product" },
-    { name: "BLOG", link: "/blog" },
+    // { name: "PRODUCT", link: "/product" },
+    // { name: "BLOG", link: "/blog" },
     { name: "ABOUT", link: "/about" },
     { name: "CONTACT", link: "/contact" },
   ];
 
   const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
   return (
     <div className="shadow-md w-full fixed top-0 left-0">
       <div className="flex justify-between items-center bg-white py-4 md:px-10 px-7 md:flex-col">
@@ -32,12 +34,21 @@ function HeaderN() {
                 key={link.name}
                 className="md:ml-8 text-l hover:text-gray-400 duration-500 md:my-0 my-2"
               >
-                <Link to={link.link}>{link.name}</Link>
+                <Link
+                  to={link.link}
+                  onClick={() => {
+                    navigate() ? false : setOpen(!open);
+                  }}
+                >
+                  {link.name}
+                </Link>
               </li>
             ))}
-            <button className="bg-dark-green text-xl text-white py-[3px] px-6 rounded-md ml-6 hover:bg-light-green duration-500">
-              Login
-            </button>
+            <Link to="/login">
+              <button className="bg-dark-green text-xl text-white py-[3px] px-6 rounded-md ml-6 hover:bg-light-green duration-500">
+                Login
+              </button>
+            </Link>
           </ul>
         </div>
         <div
