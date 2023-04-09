@@ -17,7 +17,6 @@ import ErrorPage from "./pages/error";
 import ProductDetails from "./pages/productDetails";
 import HeaderN from "./components/headerN";
 import BlogPage from "./pages/blog";
-import PageWrap from "./components/common/PageWrap";
 
 function App() {
   return (
