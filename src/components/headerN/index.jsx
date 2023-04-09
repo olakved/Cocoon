@@ -7,7 +7,7 @@ function HeaderN() {
   const links = [
     { name: "HOME", link: "/" },
     // { name: "PRODUCT", link: "/product" },
-    // { name: "BLOG", link: "/blog" },
+    { name: "BLOG", link: "/blog" },
     { name: "ABOUT", link: "/about" },
     { name: "CONTACT", link: "/contact" },
   ];

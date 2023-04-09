@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
-import imgTest from "../../assets/profileImg.jpg";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import HeaderDashboard from "../../components/common/headerDashboard";

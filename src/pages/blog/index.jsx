@@ -15,7 +15,7 @@ function BlogPage() {
       )
       .then((res) => res.data)
   );
-  console.log(data?.articles);
+
   return (
     <div className="p-20 md:px-6">
       <div className="flex justify-center mt-2">

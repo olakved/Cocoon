@@ -17,6 +17,7 @@ import ErrorPage from "./pages/error";
 import ProductDetails from "./pages/productDetails";
 import HeaderN from "./components/headerN";
 import BlogPage from "./pages/blog";
+import BlogDetails from "./pages/blogDetails";
 
 function App() {
   return (
@@ -26,10 +27,20 @@ function App() {
           path="/"
           element={
             <LayoutWrapper>
+              <HomePage />
+            </LayoutWrapper>
+          }
+        ></Route>
+        <Route
+          path="/blog"
+          element={
+            <LayoutWrapper>
               <BlogPage />
             </LayoutWrapper>
           }
-        />
+        >
+          <Route path=":source" element={<BlogDetails />} />
+        </Route>
 
         <Route path="/signup" element={<SignupPage />} />
         <Route path="/login" element={<LoginPage />} />
