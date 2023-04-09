@@ -16,7 +16,7 @@ function BlogPage() {
   );
 
   return (
-    <div className="p-20 md:px-5">
+    <div className="p-20 md:px-6">
       {isLoading ? (
         <p>loading...</p>
       ) : error ? (
